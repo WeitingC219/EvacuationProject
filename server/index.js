@@ -20,6 +20,8 @@ app.use((req, res, next) => {
 
 app.use('/', sensor);
 
+// local db 請改 mongoose.connect("mongodb://localhost:27017/<db_name>"）
+// altas db 請將 @cluster0-9megj.mongodb.net改成自己cluster，並在nodemon改自己的user_name,user_password,db_name
 mongoose
   .connect(
     `mongodb+srv://${process.env.MONGO_USER}:${
