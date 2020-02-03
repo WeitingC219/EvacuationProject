@@ -368,12 +368,9 @@ export class PathMap {
     const pos = Pos.toPos(rawPos);
 
     if (this.isInBounds(pos)) {
-      // eslint-disable-next-line no-bitwise
       this.walls[pos.x][pos.y] |= direction;
-
       const neighbor = pos.inDirection(direction); // get neighboring cell
       if (this.isInBounds(neighbor)) {
-        // eslint-disable-next-line no-bitwise
         this.walls[neighbor.x][neighbor.y] |= DIRECTIONS.OPPOSITE[direction];
       }
     }
@@ -383,12 +380,9 @@ export class PathMap {
     const pos = Pos.toPos(rawPos);
 
     if (this.isInBounds(pos)) {
-      // eslint-disable-next-line no-bitwise
       this.walls[pos.x][pos.y] &= ~direction;
-
       const neighbor = pos.inDirection(direction); // get neighboring cell
       if (this.isInBounds(neighbor)) {
-        // eslint-disable-next-line no-bitwise
         this.walls[neighbor.x][neighbor.y] &= ~DIRECTIONS.OPPOSITE[direction];
       }
     }
@@ -405,22 +399,17 @@ export class PathMap {
 
     let extra = 0;
     if (pos.x === 0) {
-      // eslint-disable-next-line no-bitwise
       extra |= WALLS.WEST;
     } else if (pos.x === this.width - 1) {
-      // eslint-disable-next-line no-bitwise
       extra |= WALLS.EAST;
     }
 
     if (pos.y === 0) {
-      // eslint-disable-next-line no-bitwise
       extra |= WALLS.SOUTH;
     } else if (pos.y === this.height - 1) {
-      // eslint-disable-next-line no-bitwise
       extra |= WALLS.NORTH;
     }
 
-    // eslint-disable-next-line no-bitwise
     return this.walls[pos.x][pos.y] | extra;
   }
 
@@ -449,7 +438,6 @@ export class PathMap {
       return false;
     }
 
-    // eslint-disable-next-line no-bitwise
     if (this.walls[fromPos.x][fromPos.y] & direction) {
       return false;
     }

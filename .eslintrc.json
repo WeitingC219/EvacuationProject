@@ -30,6 +30,11 @@
         "no-underscore-dangle": "off",
         "quotes":"off",
         "no-plusplus": "off",
-        "max-len": "off"
+        "max-len": "off",
+        "no-await-in-loop": "off",
+        "no-restricted-syntax": "off",
+        "no-unused-vars": "off",
+        "no-bitwise": "off",
+        "consistent-return": "off"
     }
 }

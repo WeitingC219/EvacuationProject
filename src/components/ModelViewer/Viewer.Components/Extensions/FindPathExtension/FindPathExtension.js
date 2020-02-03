@@ -131,7 +131,6 @@ export default class FindPathExtension extends window.Autodesk.Viewing.Extension
       const path = [];
       while (cameFrom.has(current)) {
         path.unshift(current);
-        // eslint-disable-next-line no-await-in-loop
         await setState(current, STATES.PATH);
         // eslint-disable-next-line no-param-reassign
         current = cameFrom.get(current);
@@ -166,18 +165,13 @@ export default class FindPathExtension extends window.Autodesk.Viewing.Extension
       closed.add(current);
 
       if (!posEqual(current, start)) {
-        // eslint-disable-next-line no-await-in-loop
         await setState(current, STATES.CLOSED);
       } else {
-        // eslint-disable-next-line no-await-in-loop
         await setState(current, STATES.PATH);
       }
 
       const neighborCells = neighbors(current);
-      // neighborCells.map(neighbor => {
 
-      // })
-      // eslint-disable-next-line no-restricted-syntax
       for (const neighbor of neighborCells) {
         if (closed.has(neighbor)) {
           continue;
@@ -222,7 +216,6 @@ export default class FindPathExtension extends window.Autodesk.Viewing.Extension
 
         if (!open.has(neighbor)) {
           open.add(neighbor);
-          // eslint-disable-next-line no-await-in-loop
           await setState(neighbor, STATES.OPEN);
         }
 
@@ -234,7 +227,6 @@ export default class FindPathExtension extends window.Autodesk.Viewing.Extension
         cameFrom.add(neighbor, current);
         gscore.set(neighbor, tentativeGScore);
         fscore.insert(tentativeGScore + this.cost(neighbor, goal) / 4, neighbor);
-        // eslint-disable-next-line no-await-in-loop
         await setState(neighbor, STATES.TENTATIVE);
       }
     }
