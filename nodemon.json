@@ -1,0 +1,15 @@
+{
+  "restartable": "rs",
+  "verbose": true,
+  "exec": "babel-node server/index.js",
+  "watch": [
+    "server"
+  ],
+  "env": {
+    "NODE_ENV": "development",
+    "MONGO_USER": "test",
+    "MONGO_PASSWORD": "1234",
+    "MONGO_DB": "sensor"
+  },
+  "ext": "js,json"
+}

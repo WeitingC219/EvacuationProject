@@ -1,0 +1,72 @@
+{
+  "name": "bigplatform",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@tyriar/fibonacci-heap": "^2.0.9",
+    "antd": "3.24.0",
+    "axios": "^0.19.0",
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^3.21.1",
+    "jquery": "^3.4.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.7.5",
+    "node-sass": "^4.12.0",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "prop-types": "^15.7.2",
+    "qs": "^6.8.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-player": "^1.12.0",
+    "react-redux": "^7.1.0",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.1.0",
+    "recharts": "^1.7.1",
+    "redux": "^4.0.4",
+    "snapsvg-cjs": "^0.0.6",
+    "styled-components": "^4.3.2",
+    "three": "^0.110.0",
+    "three-particle-fire": "^0.0.0",
+    "video-react": "^0.14.1",
+    "winston": "^3.2.1",
+    "yup": "^0.27.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "start-server": "nodemon",
+    "reset-db": "babel-node server/dbSeeding",
+    "lint": "eslint . --ext .js,.jsx"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/node": "^7.6.3",
+    "@babel/preset-env": "^7.6.3",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "nodemon": "^1.19.3"
+  }
+}
