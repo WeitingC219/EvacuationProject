@@ -20,9 +20,11 @@ yarn start
 ```
 
 **Config Database**
-
-在server/index.js裡面，按照提示連接到自己的mongoDB
+```bash
+# 在server/index.js裡面，按照提示連接到自己的mongoDB
+```
 
 **Config Autodesk Forge**
-
-在src/components/ModelViewer/autodeskForgeConfig.js裡面，請改成自己上傳好模型那個app的clientId,clientSecret和模型urn，請勿直接拿範例模型app進行上傳或修改之動作。
+```bash
+在src/components/ModelViewer/autodeskForgeConfig.js裡面，請改成自己上傳好模型那個app的clientId, clientSecret和模型urn，請勿直接拿範例模型app進行上傳或修改之動作。
+```
