@@ -26,5 +26,5 @@ yarn start
 
 **Config Autodesk Forge**
 ```bash
-在src/components/ModelViewer/autodeskForgeConfig.js裡面，請改成自己上傳好模型那個app的clientId, clientSecret和模型urn，請勿直接拿範例模型app進行上傳或修改之動作。
+# 在src/components/ModelViewer/autodeskForgeConfig.js裡面，請改成自己上傳好模型那個app的clientId, clientSecret和模型urn，請勿直接拿範例模型app進行上傳或修改之動作。
 ```
